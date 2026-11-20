@@ -1,4 +1,4 @@
-# Task 1 Research:Digital Clocks & Counter-Based Timing Mechanisms
+# Digital Clocks & Counter-Based Timing Mechanisms
 
 ## 1. What is a Digital Clock, and Why is it Required in Sequential Circuits?
 
