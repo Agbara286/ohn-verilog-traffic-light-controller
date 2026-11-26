@@ -55,7 +55,7 @@ module tb_traffic_light_controller;
         input [2:0] exp_a;
         input [2:0] exp_b;
         input integer duration_sec;
-        input [127:0] state_label;
+        input [159:0] state_label;
         integer i;
         begin
             $display("--- Checking %0s (Expected: A=%0s, B=%0s for %0d s) ---",
