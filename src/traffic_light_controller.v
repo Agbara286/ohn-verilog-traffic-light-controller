@@ -1,3 +1,4 @@
+`timescale 1s / 100ms
 module traffic_light_controller #(
     parameter T_A_GREEN  = 10,   
     parameter T_A_YELLOW = 3,    
@@ -6,11 +7,11 @@ module traffic_light_controller #(
 )(
     input  wire clk,             
     input  wire rst,             
-    output reg  [2:0] road_a,    //[2]=Red, [1]=Yellow, [0]=Green
+    output reg  [2:0] road_a,    
     output reg  [2:0] road_b
 );
 
-    // State encoding
+
     localparam S_A_GREEN  = 2'b00,
                S_A_YELLOW = 2'b01,
                S_B_GREEN  = 2'b10,

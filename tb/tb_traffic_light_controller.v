@@ -45,7 +45,7 @@ module tb_traffic_light_controller;
     always @(posedge clk) begin
         #0.1; 
         if (!rst && (road_a == GREEN) && (road_b == GREEN)) begin
-            $display("[FAIL] Time %0t s: SAFETY VIOLATION - Both roads are GREEN!", $time);
+            $display("[FAIL] Time %0.1f s: SAFETY VIOLATION - Both roads are GREEN!", $realtime);
             errors = errors + 1;
         end
     end
@@ -91,11 +91,11 @@ module tb_traffic_light_controller;
         rst = 1;
         @(posedge clk);
         #0.1;
-        // Releasing reset on the falling edge
+      
         @(negedge clk);
         rst = 0;
 
-       
+       sing reset on the falling edge
         check_state(GREEN,  RED,    10, "State 1 (Cycle 1)");
         check_state(YELLOW, RED,     3, "State 2 (Cycle 1)");
         check_state(RED,    GREEN,  10, "State 3 (Cycle 1)");
