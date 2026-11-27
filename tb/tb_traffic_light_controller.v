@@ -95,7 +95,7 @@ module tb_traffic_light_controller;
         @(negedge clk);
         rst = 0;
 
-       sing reset on the falling edge
+    
         check_state(GREEN,  RED,    10, "State 1 (Cycle 1)");
         check_state(YELLOW, RED,     3, "State 2 (Cycle 1)");
         check_state(RED,    GREEN,  10, "State 3 (Cycle 1)");
